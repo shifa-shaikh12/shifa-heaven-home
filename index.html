@@ -3,7 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shifa Home and Haven | Interior Design Blog</title>
+    <title>Shifa Home and Heaven | Interior Design Blog</title>
+    <meta name="description" content="Curated interior design inspiration for modern, functional living spaces. Budget-friendly home decor finds from Meesho with styling tips.">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Shifa Home and Heaven | Interior Design Blog">
+    <meta property="og:description" content="Curated interior design inspiration for modern, functional living spaces. Budget-friendly home decor finds from Meesho with styling tips.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shifahomeandhaven.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Pinterest Rich Pins -->
+    <meta name="pinterest-rich-pin" content="true">
+    <meta property="og:site_name" content="Shifa Home and Haven">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Shifa Home and Haven",
+      "description": "Interior design blog featuring budget-friendly home decor and styling tips",
+      "url": "https://shifahomeandhaven.com",
+      "author": {
+        "@type": "Person",
+        "name": "Shifa",
+        "email": "sshaikh50063@gmail.com"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "5 Minimalist Layout Changes That Instantly Brighten Your Space",
+          "description": "Maximize natural daylight and eliminate visually heavy furniture pieces with these five simple spatial layout rearrangement techniques.",
+          "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
+          "datePublished": "2026-08-30"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Creating a Calming Oasis on a Budget",
+          "description": "How earthy neutral-tone textiles and layered accent lighting can transform your bedroom retreat.",
+          "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80",
+          "datePublished": "2026-08-30"
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 
     <!-- ADSTERRA POPUNDER SCRIPT -->
@@ -23,6 +68,9 @@
 </head>
 <body>
 
+    <!-- READING PROGRESS BAR -->
+    <div class="reading-progress-bar"></div>
+
     <!-- HEADER -->
     <header class="site-header">
         <nav class="nav-container">
@@ -33,6 +81,23 @@
                 <li><a href="https://www.profitableratecpmnetwork.com/sz61txi66?key=2501fcaaf85f69c4c87edc7e0ea39a60" target="_blank" rel="noopener">DIY Decor</a></li>
                 <li><a href="#">About</a></li>
             </ul>
+            <!-- DARK MODE TOGGLE -->
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
         </nav>
     </header>
 
@@ -60,7 +125,14 @@
             <article class="post-card">
                 <div class="photo-section">
                     <a href="https://www.profitableratecpmnetwork.com/sz61txi66?key=2501fcaaf85f69c4c87edc7e0ea39a60" target="_blank" rel="noopener">
-                        <img class="post-img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Beautiful modern living room">
+                        <img class="post-img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Beautiful modern living room" loading="lazy">
+                        <!-- Pinterest Save Button -->
+                        <button class="pinterest-save-btn" data-pin-do="buttonPin" data-pin-tall="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                            Save
+                        </button>
                     </a>
                 </div>
                 <div class="post-content">
@@ -75,11 +147,17 @@
                     <div class="product-links-section">
                         <div class="product-links-title">Shop This Room (Meesho Finds)</div>
                         <ul class="affiliate-list">
-                            <li><a href="https://bitli.in/zLz4cF4" target="_blank" rel="noopener">Boho Cotton Sofa Cover</a></li>
-                            <li><a href="https://bitli.in/9aUrqJP" target="_blank" rel="noopener">Handmade Macrame Wall Hanging</a></li>
-                            <li><a href="https://bitli.in/Ndt6k33" target="_blank" rel="noopener">Set Of 5 Neutral Cushion Covers</a></li>
-                            <li><a href="https://bitli.in/wJJgpvP" target="_blank" rel="noopener">Aesthetic Table Accent Decor</a></li>
-                            <li><a href="https://bitli.in/SKffqS2" target="_blank" rel="noopener">Minimalist Floor Lamp</a></li>
+                            <li><a href="https://bitli.in/zLz4cF4" target="_blank" rel="noopener">Boho Cotton Sofa Cover <span class="price-badge">Under ₹399</span></a></li>
+                            <li><a href="https://bitli.in/9aUrqJP" target="_blank" rel="noopener">Handmade Macrame Wall Hanging <span class="price-badge trending">Trending</span></a></li>
+                            <li><a href="https://bitli.in/Ndt6k33" target="_blank" rel="noopener">Set Of 5 Neutral Cushion Covers <span class="price-badge bestseller">Bestseller ★ 4.8</span></a></li>
+                            <li><a href="https://bitli.in/wJJgpvP" target="_blank" rel="noopener">Aesthetic Table Accent Decor <span class="price-badge">Under ₹299</span></a></li>
+                            <li><a href="https://bitli.in/SKffqS2" target="_blank" rel="noopener">Minimalist Floor Lamp <span class="price-badge">Under ₹599</span></a></li>
+                            <li><a href="https://bitli.in/meWE0B9" target="_blank" rel="noopener">Decorative Wall Mirror Set <span class="price-badge trending">Trending</span></a></li>
+                            <li><a href="https://bitli.in/Xd44GUx" target="_blank" rel="noopener">Modern Throw Blanket <span class="price-badge">Under ₹449</span></a></li>
+                            <li><a href="https://bitli.in/2Q6N759" target="_blank" rel="noopener">Ceramic Planter With Stand <span class="price-badge bestseller">Bestseller ★ 4.7</span></a></li>
+                            <li><a href="https://bitli.in/bjhuCfy" target="_blank" rel="noopener">Rattan Storage Basket <span class="price-badge">Under ₹349</span></a></li>
+                            <li><a href="https://bitli.in/34mYsaX" target="_blank" rel="noopener">Geometric Wall Art Print <span class="price-badge">Under ₹199</span></a></li>
+                            <li><a href="https://bitli.in/KjBWiHz" target="_blank" rel="noopener">Accent Rug Runner <span class="price-badge">Under ₹499</span></a></li>
                         </ul>
                     </div>
 
@@ -91,7 +169,14 @@
             <article class="post-card">
                 <div class="photo-section">
                     <a href="https://www.profitableratecpmnetwork.com/sz61txi66?key=2501fcaaf85f69c4c87edc7e0ea39a60" target="_blank" rel="noopener">
-                        <img class="post-img" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Cozy bedroom with warm interior design">
+                        <img class="post-img" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Cozy bedroom with warm interior design" loading="lazy">
+                        <!-- Pinterest Save Button -->
+                        <button class="pinterest-save-btn" data-pin-do="buttonPin" data-pin-tall="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                            Save
+                        </button>
                     </a>
                 </div>
                 <div class="post-content">
@@ -106,8 +191,13 @@
                     <div class="product-links-section">
                         <div class="product-links-title">Shop This Look</div>
                         <ul class="affiliate-list">
-                            <li><a href="https://bitli.in/2CbrnNo" target="_blank" rel="noopener">Aesthetic Beautiful Statue</a></li>
-                            <li><a href="https://bitli.in/MA328Bs" target="_blank" rel="noopener">Warm White Ceramic Bedside Lamp</a></li>
+                            <li><a href="https://bitli.in/2CbrnNo" target="_blank" rel="noopener">Aesthetic Beautiful Statue <span class="price-badge">Under ₹399</span></a></li>
+                            <li><a href="https://bitli.in/MA328Bs" target="_blank" rel="noopener">Warm White Ceramic Bedside Lamp <span class="price-badge bestseller">Bestseller ★ 4.9</span></a></li>
+                            <li><a href="https://bitli.in/5SpI6KH" target="_blank" rel="noopener">Soft Cotton Duvet Cover Set <span class="price-badge">Under ₹599</span></a></li>
+                            <li><a href="https://bitli.in/htm0dnM" target="_blank" rel="noopener">Aromatherapy Diffuser <span class="price-badge trending">Trending</span></a></li>
+                            <li><a href="https://bitli.in/sk093D4" target="_blank" rel="noopener">Decorative Bedside Table Organizer <span class="price-badge">Under ₹249</span></a></li>
+                            <li><a href="https://bitli.in/m80be7A" target="_blank" rel="noopener">String Fairy Lights <span class="price-badge">Under ₹299</span></a></li>
+                            <li><a href="https://bitli.in/63x6Q2H" target="_blank" rel="noopener">Velvet Decorative Pillow <span class="price-badge bestseller">Bestseller ★ 4.6</span></a></li>
                         </ul>
                     </div>
 
@@ -123,19 +213,36 @@
             <div class="widget">
                 <h3 class="widget-title">Meet Shifa</h3>
                 <div class="profile-wrapper">
-                    <img class="profile-img" src="https://tse2.mm.bing.net/th/id/OIP.S-T9yKuTGyZ8ZKHQfU83wQHaNN?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Shifa editorial portrait">
+                    <img class="profile-img" src="https://tse2.mm.bing.net/th/id/OIP.S-T9yKuTGyZ8ZKHQfU83wQHaNN?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Shifa editorial portrait" loading="lazy">
                 </div>
                 <p>Hello! I am Shifa. I break down interior design styling concepts to help you build functional, beautifully curated spaces you love coming home to.</p>
                 <a href="https://www.profitableratecpmnetwork.com/sz61txi66?key=2501fcaaf85f69c4c87edc7e0ea39a60" target="_blank" rel="noopener" class="read-more">My Story &rarr;</a>
             </div>
 
-            <div class="widget">
-                <h3 class="widget-title">The Weekly Edit</h3>
-                <p>Subscribe to receive curated styling tips and exclusive product source links directly in your inbox.</p>
+            <!-- LEAD MAGNET WIDGET -->
+            <div class="widget lead-magnet-widget">
+                <div class="lead-magnet-icon">📥</div>
+                <h3 class="widget-title">Free Decor Checklist</h3>
+                <p><strong>Download: 10 Must-Have Meesho Decor Items Under ₹500</strong></p>
+                <p class="lead-magnet-benefit">✨ Instant PDF • 10 Budget Picks • Shop Links Included</p>
                 <div class="newsletter-form">
                     <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
-                    <button type="button" class="widget-btn">Subscribe</button>
+                    <button type="button" class="widget-btn lead-magnet-btn">Get Free PDF</button>
                 </div>
+            </div>
+
+            <!-- WHATSAPP JOIN WIDGET -->
+            <div class="widget whatsapp-widget">
+                <div class="whatsapp-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </div>
+                <h3 class="widget-title">Join 5,000+ Decor Lovers</h3>
+                <p>Get daily budget finds & styling tips directly on WhatsApp</p>
+                <a href="https://whatsapp.com/channel/0029VbDZRurKgsO0js8CaA2x" target="_blank" rel="noopener" class="widget-btn whatsapp-btn">
+                    Join WhatsApp Channel
+                </a>
             </div>
 
             <!-- CONTACT WIDGET -->
@@ -143,7 +250,7 @@
                 <h3 class="widget-title">Contact</h3>
                 <p>For collaborations, questions, or suggestions, feel free to get in touch.</p>
                 <a href="mailto:sshaikh50063@gmail.com" class="email-link">sshaikh50063@gmail.com</a>
-                
+
                 <div class="social-icons">
                     <a href="https://www.instagram.com/aarshiya.its?utm_source=qr&igsi=Nm1ucjJxaHZieHNv" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -171,6 +278,60 @@
             <p>Contact: <a href="mailto:sshaikh50063@gmail.com">sshaikh50063@gmail.com</a></p>
         </div>
     </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // READING PROGRESS BAR
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.reading-progress-bar').style.width = scrolled + '%';
+        });
+
+        // DARK MODE TOGGLE
+        const themeToggle = document.querySelector('.theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        });
+
+        // PINTEREST SAVE BUTTONS
+        document.querySelectorAll('.pinterest-save-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const img = btn.closest('.photo-section').querySelector('img');
+                const url = window.location.href;
+                const description = btn.closest('.post-card').querySelector('.post-title a').textContent;
+                window.open(
+                    `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&media=${encodeURIComponent(img.src)}&description=${encodeURIComponent(description)}`,
+                    '_blank',
+                    'width=750,height=550'
+                );
+            });
+        });
+
+        // LEAD MAGNET DOWNLOAD
+        document.querySelectorAll('.lead-magnet-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const email = btn.previousElementSibling.value;
+                if (email && email.includes('@')) {
+                    alert('✅ Success! Check your email for the free PDF checklist.');
+                    btn.previousElementSibling.value = '';
+                    // Here you would integrate with your email service provider
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
