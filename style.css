@@ -7,7 +7,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -47,6 +46,7 @@ html {
     --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-apple-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
     --ease-out-smooth: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Apple Luxury Multi-layered Shadows */
     --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
@@ -77,7 +77,6 @@ html {
     --header-bg: rgba(13, 13, 15, 0.85);
     --hero-bg: radial-gradient(circle at 50% 0%, #1a1a1e 0%, #0d0d0f 100%);
     --footer-bg: #09090b;
-
     --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.4);
     --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.4);
     --shadow-card-hover: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-glow);
@@ -92,7 +91,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     letter-spacing: -0.01em;
-    transition: background 0.4s var(--ease-apple), color 0.4s var(--ease-apple);
+    transition: background 0.5s var(--ease-apple), color 0.5s var(--ease-apple);
 }
 
 img {
@@ -100,7 +99,6 @@ img {
     max-width: 100%;
     height: auto;
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
     backface-visibility: hidden;
     transform: translateZ(0);
 }
@@ -108,7 +106,7 @@ img {
 a {
     color: inherit;
     text-decoration: none;
-    transition: color 0.3s var(--ease-apple), transform 0.3s var(--ease-apple);
+    transition: color 0.3s var(--ease-apple);
 }
 
 /* =====================================================
@@ -122,7 +120,7 @@ a {
     background: linear-gradient(90deg, var(--accent), var(--accent-light));
     z-index: 10000;
     width: 0%;
-    transition: width 0.1s ease-out;
+    transition: width 0.05s linear;
     box-shadow: 0 0 10px var(--accent-glow);
 }
 
@@ -186,7 +184,7 @@ a {
     backdrop-filter: saturate(180%) blur(24px);
     -webkit-backdrop-filter: saturate(180%) blur(24px);
     border-bottom: 1px solid var(--border);
-    transition: background 0.4s var(--ease-apple), border-color 0.4s var(--ease-apple), box-shadow 0.4s var(--ease-apple);
+    transition: all 0.5s var(--ease-apple);
     animation: appleFadeIn 0.8s var(--ease-apple) forwards;
 }
 
@@ -203,8 +201,7 @@ a {
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--black);
-    position: relative;
-    transition: transform 0.4s var(--ease-apple), color 0.3s var(--ease-apple);
+    transition: transform 0.4s var(--ease-apple-bounce), color 0.3s var(--ease-apple);
 }
 
 .logo:hover {
@@ -272,7 +269,7 @@ a {
     border: 1px solid var(--border);
     color: var(--black);
     cursor: pointer;
-    transition: all 0.35s var(--ease-apple);
+    transition: all 0.4s var(--ease-apple-bounce);
     outline: none;
     position: relative;
     overflow: hidden;
@@ -280,13 +277,17 @@ a {
 
 .theme-toggle:hover {
     transform: scale(1.08) rotate(10deg);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-subtle);
     border-color: var(--border-hover);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
 }
 
 .sun-icon, .moon-icon {
     position: absolute;
-    transition: transform 0.4s var(--ease-apple), opacity 0.4s var(--ease-apple);
+    transition: transform 0.5s var(--ease-apple-bounce), opacity 0.5s var(--ease-apple);
 }
 
 [data-theme="light"] .moon-icon {
@@ -318,7 +319,7 @@ a {
     text-align: center;
     position: relative;
     overflow: hidden;
-    transition: background 0.4s var(--ease-apple);
+    transition: background 0.5s var(--ease-apple);
 }
 
 .hero::before {
@@ -329,7 +330,7 @@ a {
     transform: translateX(-50%);
     width: 800px;
     height: 500px;
-    background: radial-gradient(circle, var(--accent-glow) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
 }
@@ -354,7 +355,7 @@ a {
     padding: 6px 14px;
     border-radius: 30px;
     backdrop-filter: blur(8px);
-    transition: all 0.3s var(--ease-apple);
+    transition: all 0.3s var(--ease-apple-bounce);
 }
 
 .hero-label:hover {
@@ -375,8 +376,6 @@ a {
     font-style: italic;
     font-weight: 400;
     color: var(--accent);
-    position: relative;
-    display: inline-block;
 }
 
 .hero p {
@@ -408,12 +407,10 @@ a {
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: -0.01em;
-    position: relative;
-    overflow: hidden;
     cursor: pointer;
     box-shadow: var(--shadow-subtle);
-    transition: transform 0.35s var(--ease-apple), box-shadow 0.35s var(--ease-apple), background 0.35s var(--ease-apple);
-    will-change: transform, box-shadow;
+    transition: all 0.4s var(--ease-apple);
+    will-change: transform;
 }
 
 .primary-btn {
@@ -436,12 +433,10 @@ a {
     background: var(--light-bg);
     color: var(--black);
     border: 1px solid var(--border);
-    backdrop-filter: blur(10px);
 }
 
 .secondary-btn:hover {
-    background: var(--dark-surface);
-    color: var(--black);
+    background: var(--card-bg);
     border-color: var(--border-hover);
     transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow-card);
@@ -470,9 +465,8 @@ a {
     gap: 28px;
     align-items: center;
     box-shadow: var(--shadow-card);
-    transition: transform 0.5s var(--ease-apple), box-shadow 0.5s var(--ease-apple), border-color 0.5s var(--ease-apple);
-    will-change: transform, box-shadow;
-    position: relative;
+    transition: all 0.5s var(--ease-apple);
+    will-change: transform;
     overflow: hidden;
 }
 
@@ -495,7 +489,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s var(--ease-apple), filter 0.7s var(--ease-apple);
+    transition: transform 0.7s var(--ease-apple);
     will-change: transform;
 }
 
@@ -517,7 +511,6 @@ a {
     padding: 6px 14px;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -537,6 +530,10 @@ a {
 .pinterest-save-btn:hover {
     background: #ad081b;
     transform: scale(1.05);
+}
+
+.pinterest-save-btn:active {
+    transform: scale(0.95);
 }
 
 .post-category {
@@ -565,11 +562,11 @@ a {
 
 .post-title a {
     position: relative;
-    background: linear-gradient(to right, var(--black), var(--black));
+    background: linear-gradient(to right, var(--accent), var(--accent));
     background-size: 0% 1px;
-    background-position: 0 95%;
+    background-position: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.4s var(--ease-apple), color 0.3s var(--ease-apple);
+    transition: all 0.4s var(--ease-apple);
 }
 
 .post-title a:hover {
@@ -592,11 +589,12 @@ a {
     background: var(--light-bg);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    transition: background 0.3s var(--ease-apple), border-color 0.3s var(--ease-apple);
+    transition: all 0.3s var(--ease-apple);
 }
 
 .post-card:hover .product-links-section {
-    border-color: rgba(140, 106, 67, 0.3);
+    border-color: var(--accent);
+    background: var(--card-bg);
 }
 
 .product-links-title {
@@ -615,10 +613,6 @@ a {
     gap: 10px 14px;
 }
 
-.affiliate-list li {
-    display: inline-flex;
-}
-
 .affiliate-list a {
     color: var(--text-primary);
     font-size: 0.82rem;
@@ -626,18 +620,22 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 4px 8px;
-    border-radius: 6px;
+    padding: 6px 10px;
+    border-radius: 8px;
     background: var(--card-bg);
     border: 1px solid var(--border);
-    transition: all 0.25s var(--ease-apple);
+    transition: all 0.3s var(--ease-apple);
 }
 
 .affiliate-list a:hover {
     color: var(--accent);
     border-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-subtle);
+}
+
+.affiliate-list a:active {
+    transform: translateY(0);
 }
 
 /* PRICE & STATUS BADGES */
@@ -645,11 +643,12 @@ a {
     display: inline-block;
     font-size: 0.68rem;
     font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 4px;
+    padding: 3px 8px;
+    border-radius: 5px;
     background: rgba(140, 106, 67, 0.12);
     color: var(--accent);
     letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 .price-badge.bestseller {
@@ -679,7 +678,7 @@ a {
     color: var(--black);
     margin-top: 6px;
     letter-spacing: -0.01em;
-    transition: transform 0.3s var(--ease-apple), color 0.3s var(--ease-apple);
+    transition: all 0.3s var(--ease-apple);
 }
 
 .read-more:hover {
@@ -702,7 +701,7 @@ a {
     border-radius: var(--radius);
     padding: 26px;
     box-shadow: var(--shadow-card);
-    transition: transform 0.4s var(--ease-apple), box-shadow 0.4s var(--ease-apple), border-color 0.4s var(--ease-apple);
+    transition: all 0.4s var(--ease-apple);
 }
 
 .widget:hover {
@@ -734,7 +733,7 @@ a {
     margin-bottom: 16px;
     border: 2px solid var(--border);
     box-shadow: var(--shadow-subtle);
-    transition: transform 0.5s var(--ease-apple-bounce), box-shadow 0.5s var(--ease-apple);
+    transition: all 0.5s var(--ease-apple-bounce);
 }
 
 .profile-wrapper:hover {
@@ -752,8 +751,6 @@ a {
 .lead-magnet-widget {
     background: linear-gradient(135deg, var(--card-bg) 0%, var(--light-bg) 100%);
     border: 1px solid var(--accent);
-    position: relative;
-    overflow: hidden;
 }
 
 .lead-magnet-icon {
@@ -811,6 +808,10 @@ a {
     box-shadow: var(--shadow-button);
 }
 
+.widget-btn:active {
+    transform: translateY(0);
+}
+
 .lead-magnet-btn {
     background: var(--accent);
     color: #ffffff;
@@ -838,15 +839,16 @@ a {
     justify-content: center;
     margin: 0 auto 12px;
     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+    transition: transform 0.3s var(--ease-apple-bounce);
+}
+
+.whatsapp-widget:hover .whatsapp-icon-wrapper {
+    transform: scale(1.08);
 }
 
 .whatsapp-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     background: #25D366;
     color: #ffffff;
-    width: 100%;
 }
 
 .whatsapp-btn:hover {
@@ -874,6 +876,7 @@ a {
     border-top: 1px solid var(--border);
     display: flex;
     gap: 12px;
+    justify-content: center;
 }
 
 .social-icon-btn {
@@ -894,7 +897,11 @@ a {
     color: var(--bg-page);
     border-color: var(--black);
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-subtle);
+}
+
+.social-icon-btn:active {
+    transform: translateY(0) scale(0.95);
 }
 
 /* =====================================================
@@ -906,7 +913,7 @@ a {
     background: var(--footer-bg);
     color: var(--gray);
     font-size: 0.82rem;
-    transition: background 0.4s var(--ease-apple);
+    transition: all 0.5s var(--ease-apple);
 }
 
 .footer-container {
@@ -932,13 +939,13 @@ a {
 ===================================================== */
 @supports (animation-timeline: view()) {
     .post-card {
-        animation: appleFadeUp ease-out both;
+        animation: appleFadeUp linear both;
         animation-timeline: view();
         animation-range: entry 10% cover 25%;
     }
 
     .widget {
-        animation: appleFadeUp ease-out both;
+        animation: appleFadeUp linear both;
         animation-timeline: view();
         animation-range: entry 10% cover 25%;
     }
@@ -980,5 +987,17 @@ a {
         flex-direction: column;
         gap: 12px;
         text-align: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn {
+        width: 100%;
     }
 }
