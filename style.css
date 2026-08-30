@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap');
+/* Google Fonts moved to <head> for GitHub Pages compatibility */
 
 /* =====================================================
    RESET & ULTRA-HD APPLE-LEVEL CLARITY SETTINGS
@@ -287,27 +287,32 @@ a {
 
 .sun-icon, .moon-icon {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    width: 20px;
+    height: 20px;
     transition: transform 0.5s var(--ease-apple-bounce), opacity 0.5s var(--ease-apple);
 }
 
 [data-theme="light"] .moon-icon {
     opacity: 0;
-    transform: translateY(16px) rotate(45deg);
+    transform: translate(-50%, calc(-50% + 16px)) rotate(45deg);
 }
 
 [data-theme="light"] .sun-icon {
     opacity: 1;
-    transform: translateY(0) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
 }
 
 [data-theme="dark"] .sun-icon {
     opacity: 0;
-    transform: translateY(-16px) rotate(-45deg);
+    transform: translate(-50%, calc(-50% - 16px)) rotate(-45deg);
 }
 
 [data-theme="dark"] .moon-icon {
     opacity: 1;
-    transform: translateY(0) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
 }
 
 /* =====================================================
@@ -879,8 +884,26 @@ a {
     justify-content: center;
 }
 
-.social-icon-btn {
-    display: inline-flex;
+.social-icon-btn svg,
+.pinterest-save-btn svg,
+.whatsapp-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.social-icon-btn svg[fill="none"] {
+    fill: none;
+}
+
+@media (hover: none) {
+    .pinterest-save-btn {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
     align-items: center;
     justify-content: center;
     width: 38px;
